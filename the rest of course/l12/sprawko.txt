@@ -1,0 +1,12 @@
+1) w bug6 dodano mutex na wzor arrayloops
+jedyna roznica -> array zmienne glob, a dp_m jedna struct glob. 
+prostszy kod; jedno miejsce w pamieci gdzie wszystko jest skupione, "sztuka"?
+
+2) pthread_cond_broadcast(3THR) to unblock all threads that are blocked on the condition variable pointed to by cv, specified by pthread_cond_wait()
+
+pthread_condattr_setpshared(3THR) sets the scope of a condition variable to either process private (intraprocess) or system wide (interprocess). If the condition variable is created with the pshared attribute set to the PTHREAD_PROCESS_SHARED state, and it exists in shared memory, it can be shared among threads from more than one process
+
+bug4.c
+w czasie sleep dostawal sygnal, po usunieciu watki sie zgrywaja
+
+3) Message Passing Interface

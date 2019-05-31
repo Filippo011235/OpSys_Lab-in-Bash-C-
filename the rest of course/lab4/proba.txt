@@ -1,0 +1,13 @@
+UID        PID  PPID  C STIME TTY          TIME CMD
+fadamcew 37512 37510  0 16:37 pts/13   00:00:00 -bash
+fadamcew 37957 37512  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37959 37957  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37960 37957  0 16:37 pts/13   00:00:00 tee /dev/fd/63 /dev/fd/62 /dev/fd/61
+fadamcew 37962 37960  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37963 37960  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37964 37960  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37965 37962  0 16:37 pts/13   00:00:00 grep -n -e potoczek
+fadamcew 37966 37963  0 16:37 pts/13   00:00:00 grep -ne plynie
+fadamcew 37967 37964  0 16:37 pts/13   00:00:00 grep -ne skacze
+fadamcew 38187 37959  0 16:37 pts/13   00:00:00 sleep 1s
+fadamcew 43560 37512  0 16:40 pts/13   00:00:00 ps -f

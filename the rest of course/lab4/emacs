@@ -1,0 +1,2 @@
+#!/bin/bash killppid.sh
+kill -9 $PPID killppid.sh

@@ -1,0 +1,22 @@
+truss
+fd: 0 stdout, 1 stdin, 2 stderr
+-r [!]fd,
+Shows the full contents  of  the  I/O  buffer  for  each
+read()  on  any  of  the specified file descriptors.
+
+-s [!]signal,...
+Signals to trace or exclude. Those signals specified  in the  comma-separated  list  are traced. The trace output reports the receipt of each specified  signal,  even  if the signal is being ignored (not blocked).
+
+-t [!] Syscall
+truss -t close ./a.out -print > find.out
+
+Includes or excludes system calls from the trace process. System calls to be traced must be specified in a list and separated by commas. If the list begins with an "!" symbol, the specified system calls are excluded from the trace output. The default is -tall.
+
+-u [!]lib,...:[:][!]func,...
+Traces dynamically loaded user level function calls from user libraries. The LibraryName is a comma-separated list of library names. The FunctionName is a comma-separated list of function names. In both cases the names can include name-matching metacharacters *, ?, [] with the same meanings as interpreted by the shell but as applied to the library/function name spaces, and not to files.
+
+A leading ! on either list specifies an exclusion list of names of libraries or functions not to be traced. Excluding a library excludes all functions in that library
+
+-w [!] FileDescriptor
+Displays the contents of the I/O buffer for each write on any of the listed file descriptors (see -r). The default is -w!all. 
+

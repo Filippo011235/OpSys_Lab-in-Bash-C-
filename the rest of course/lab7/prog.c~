@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int main () {
+  int PIDproc = getpid();
+
+  //  while(1){
+      printf("PID tego procesu %d\n", PIDproc);
+      write("cos");
+      sleep(1);
+      //}
+
+}

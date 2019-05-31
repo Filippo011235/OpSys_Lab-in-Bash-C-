@@ -1,0 +1,12 @@
+1) Jest w czolowce. Po dodaniu 'sleep 0.1' co pewien czas pojawia sie w dolnej czesci ekranu.
+
+Reakcje sa poprawne
+
+2)
+ALRM    caught  0x16d38         0
+TERM    caught  0x16d38         0
+USR1    caught  done/0x16c3c            0   
+USR2    caught  done/0x16c3c            0
+'userspace address of the handler'
+
+Obok PID jest wypisane uzyte polecenie

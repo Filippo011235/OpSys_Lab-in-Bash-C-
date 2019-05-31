@@ -1,0 +1,3 @@
+2) 32 watki
+Kolejnosc watkow  wynika z tego, ze nowe watki pojawiaja sie gdy poprzednie obliczaja w petli - planista skacze pomiedzy kontynuacja obliczen jednego watku a zapewnieniem dostepu dla kolejnego. 
+

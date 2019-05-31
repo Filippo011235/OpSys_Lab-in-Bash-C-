@@ -1,0 +1,16 @@
+2) 32 watki
+Kolejnosc watkow  wynika z tego, ze nowe watki pojawiaja sie gdy poprzednie obliczaja w petli - planista skacze pomiedzy kontynuacja obliczen jednego watku a zapewnieniem dostepu do procesora dla kolejnego.
+
+3) 1 - (void *) &struct
+   2 - w watku: nowa_struct = (struct *) wskaznik_void
+bug3.c - za duzo konwersji na wskaznik w watku
+
+4) pthred_exit w mainie brakowalo:
+After the last thread in a process terminates, the process terminates
+       as by calling exit(3) with an exit status of zero; thus, process-
+              shared resources are released and functions registered using
+	             atexit(3) are called.
+
+5) Funkcja pthread_join, czeka az dany watek skonczy swoja prace. Dany watek musi wczesniej zostac ustawiony atrybutem *_JOINABLE
+
+6) trzeba bylo ustawic odpowiedni rozmiar stosu w atrybutach, a nastepnie przekazac attr do watkow

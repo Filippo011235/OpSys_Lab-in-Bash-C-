@@ -1,0 +1,25 @@
+1) kill:
+1-8 & 10-15 trap dziala, proc. kontynuuje
+9(SIGKILL) zabija
+ctrl + c aktywuje komunikat, ale proc. kontunuuje dzialanie
+ctrl + z nie zatrzymuje, ale kill -SIGSTOP tak
+
+
+2) ogolnie ctrl z i sigstop zatrzymuja, ale:
+- dla proc. w tle(&) ctrl z nie dziala, ale kill -SIGSTOP PID zatrzymuje
+- proc w foreground - na odwrot
+
+przywracanie proc. od zatrzymania do...: bg - background /fg - foreground
+- & bg i CONT takie same; fg przywraca do foreground, nie mozna wpisywac komend, ale ctrl z dziala
+- !& CONT uruchamia w background; bg aktywuje &; fg wznawia jak wczesniej
+
+CONT przypomina bg, ale w uzytym skrypcie nie zachowuja sie dokladnie tak samo
+
+3)
+ctrl C zabija wszystkie
+ctrl Z zatrzymuje reprodukcje
+
+4) Sprawdź wartości priorytetów procesów i ich liczby nice, a następnie przećwicz obniżanie priorytetu pracującego w tle procesu (nice/renice). Czy potrafisz zademonstrować działanie obniżonego liczbą nice priorytetu? (plik potwierdzajacy ze proc z mniejszym idzie na dol)
+
+nice -n -20-19 PROCCES
+renice - permission denied

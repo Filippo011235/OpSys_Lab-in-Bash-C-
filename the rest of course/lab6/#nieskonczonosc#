@@ -1,0 +1,31 @@
+#!/bin/bash
+trap wyswietlikill 14
+trap wyswietl  15 
+trap petla 10
+trap  12
+
+wyswietlikill()
+{
+    echo "Zlapałem 14, teraz exit"
+    exit 1;
+}
+wyswietl()
+{
+    echo "Zlapalem 15, praca trwa dalej"
+}
+petla()
+{
+    j=0
+    while [ $j -lt 1000 ];do
+	j=$(( $j + 1 ))
+    done
+    if [ $j -eq 1000 ]
+    then
+       echo "1000, teraz exit"
+    fi
+    exit 1
+
+}
+
+i=0
+while sleep 1 ; do i=i+1 ;done 

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+clear
+
+ps -f
+
+bash itsatrap.sh
+
+killall -9 bash itsatrap.sh
+
+ps -f

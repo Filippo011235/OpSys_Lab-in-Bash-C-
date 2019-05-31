@@ -1,0 +1,27 @@
+1) ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S 15017 35642 35641  0  80   0 -  3812 -      pts/23   00:00:00 bash
+0 R 15017 43538 35642  0  80   0 -  7846 -      pts/23   00:00:00 ps
+
+-l pokazuje wiecej rodzajow danych niz -f
+-f pokazuje UID jako nazwe oraz flagi z ktorymi wywolano polecenia
+
+-u pokazuje procesy podanego uzytkowanika
+-t sortuje na podstawie terminala w ktorym procesy dzialaja
+-p: pokazuje procesy z danym PID
+
+Pierwsze pyt: Dwa procesy
+Drugie: pgrep ps zwraca numery od 1514 do 1521 - 7 procesow
+UID        PID  PPID  C STIME TTY          TIME CMD
+fadamcew 37512 37510  0 16:37 pts/13   00:00:00 -bash
+fadamcew 37957 37512  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37959 37957  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37960 37957  0 16:37 pts/13   00:00:00 tee /dev/fd/63 /dev/fd/62 /dev/fd/61
+fadamcew 37962 37960  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37963 37960  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37964 37960  0 16:37 pts/13   00:00:00 bash Rurka.sh
+fadamcew 37965 37962  0 16:37 pts/13   00:00:00 grep -n -e potoczek
+fadamcew 37966 37963  0 16:37 pts/13   00:00:00 grep -ne plynie
+fadamcew 37967 37964  0 16:37 pts/13   00:00:00 grep -ne skacze
+fadamcew 38187 37959  0 16:37 pts/13   00:00:00 sleep 1s
+fadamcew 44293 37512  0 16:41 pts/13   00:00:00 ps -f

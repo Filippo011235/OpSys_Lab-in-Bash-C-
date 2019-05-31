@@ -1,0 +1,43 @@
+truss
+fd: 0 stdout, 1 stdin, 2 stderr
+-r [!]fd,
+Shows the full contents  of  the  I/O  buffer  for  each
+read()  on  any  of  the specified file descriptors.
+
+-s [!]signal,...
+truss -t \!all -s all xterm
+xterm Xt error: Can't open display:
+
+Signals to trace or exclude. Those signals specified  in the  comma-separated  list  are traced. The trace output reports the receipt of each specified  signal,  even  if the signal is being ignored (not blocked).
+
+-t [!] Syscall
+truss -t \!all 
+Includes or excludes system calls from the trace process. System calls to be traced must be specified in a list and separated by commas. If the list begins with an "!" symbol, the specified system calls are excluded from the trace output. The default is -tall.
+
+-u [!]lib,...:[:][!]func,...
+Na dole
+Traces dynamically loaded user level function calls from user libraries. The LibraryName is a comma-separated list of library names. The FunctionName is a comma-separated list of function names. 
+
+-w [!] FileDescriptor
+truss -t \!all -w 1 echo Cos
+Cos
+write(1, " C o s\n", 4)                         = 4
+
+Displays the contents of the I/O buffer for each write on any of the listed file descriptors (see -r). The default is -w!all. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+analiza dzialanie programu
+
+PID tego procesu 8614
+write(1, " P I D   t e g o   p r o".., 22)      = 22
+nanosleep(0xFFBFFC68, 0xFFBFFC60) (sleeping...)
+nanosleep(0xFFBFFC68, 0xFFBFFC60)               = 0
+_exit(0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+ile printf w ls?
+
+truss -t \!all -u libc:printf ls
+9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
